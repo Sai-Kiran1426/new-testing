@@ -22,7 +22,7 @@ steps:
       ]
 
 images:
-  - 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/hello-world-app'
+  - 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/CICD-Github'
 
 options:
   logging: CLOUD_LOGGING_ONLY
