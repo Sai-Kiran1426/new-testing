@@ -1,9 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/CICD-Github', '.']
+    args: ['build', '-t', 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/cicd-github', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/CICD-Github']
+    args: ['push', 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/cicd-github']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'gcloud'
@@ -13,7 +13,7 @@ steps:
         'deploy',
         'hello-world-app',
         '--image',
-        'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/CICD-Github',
+        'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/cicd-github',
         '--platform',
         'managed',
         '--region',
@@ -22,7 +22,7 @@ steps:
       ]
 
 images:
-  - 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/CICD-Github'
+  - 'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/cicd-github'
 
 options:
   logging: CLOUD_LOGGING_ONLY
