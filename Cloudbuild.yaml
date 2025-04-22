@@ -11,7 +11,7 @@ steps:
       [
         'run',
         'deploy',
-        'hello-world-app',
+        'cicd-github',
         '--image',
         'us-docker.pkg.dev/saikiran9640/hello-world-app-repo/cicd-github',
         '--platform',
